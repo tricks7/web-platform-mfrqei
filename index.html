@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<h1>Frisbee Flight Simulator</h1>
+
+	<form id="form">
+		<label for="speed">Speed: </label><input id="speed" type="text">
+		<label for="glide">Glide: </label><input id="glide" type="text">
+		<label for="turn">Turn: </label><input id="turn" type="text">
+		<label for="fade">Fade: </label><input id="fade" type="text">
+		<button type="submit">Simulate flight</button>
+	</form>
+
+	<div id="result"></div>
+	<div id="errors"></div>
+
+	<p><b>Instructions:</b></p>
+	<ul>
+		<li>Speed field should only allow numbers from 2 to 14</li>
+		<li>Glide field should only allow numbers from 2 to 8</li>
+		<li>Turn field should only allow numbers from -5 to 1</li>
+		<li>Fade field should only allow numbers from 0 to 5</li>
+	</ul>
+
+	<p>
+		When the form is submitted take the values in the form and calculate the distance in feet of the frisbee's
+		flight using
+		this formula:
+	</p>
+
+	<p>
+		<code>distance = 10 * (speed * glide) + (turn * -1.2) + (fade * 0.5)</code>
+	</p>
+
+	<p>
+		Display the result in the div with the id of <code>result</code>.
+	</p>
+
+	<p>
+		If the results don't make a ton of sense thats okay, this formula is not accurate.
+	</p>
+
+	<p>
+		If the form is submitted and there are any invalid values display a list of errors in the div with the id of
+		<code>errors</code>.
+	</p>
+
+	<p>
+		Lastly lets do a little styling on this page:
+	</p>
+
+	<ul>
+		<li>Style all text to use a sans-serif font</li>
+		<li>Style all labels to be the same width</li>
+		<li>Style all text inputs to be the same width</li>
+		<li>
+			Make each label and input pair goes on its own line so the form is in a column. It should look like this:
+			<pre>
+        <code>
+          label input
+          label input
+          label input
+          label input
+          button
+        </code>
+      </pre>
+		</li>
+	</ul>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
